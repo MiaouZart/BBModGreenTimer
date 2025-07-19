@@ -1,0 +1,444 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>4dc64638-5ffa-4486-a76f-16382adf2135</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>BBGreenTimer</RootNamespace>
+    <AssemblyName>BBGreenTimer</AssemblyName>
+    <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <Deterministic>true</Deterministic>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="0Harmony">
+      <HintPath>Lib\0Harmony.dll</HintPath>
+    </Reference>
+    <Reference Include="Assembly-CSharp">
+      <HintPath>Lib\Assembly-CSharp.dll</HintPath>
+    </Reference>
+    <Reference Include="BBModMenu">
+      <HintPath>..\..\BBModMenu\BBModMenu\bin\Debug\BBModMenu.dll</HintPath>
+    </Reference>
+    <Reference Include="Facepunch.Steamworks.Win64">
+      <HintPath>Lib\Facepunch.Steamworks.Win64.dll</HintPath>
+    </Reference>
+    <Reference Include="jamathan.gridplacer.editor">
+      <HintPath>Lib\jamathan.gridplacer.editor.dll</HintPath>
+    </Reference>
+    <Reference Include="jamathan.gridplacer.runtime">
+      <HintPath>Lib\jamathan.gridplacer.runtime.dll</HintPath>
+    </Reference>
+    <Reference Include="MelonLoader">
+      <HintPath>Lib\MelonLoader.dll</HintPath>
+    </Reference>
+    <Reference Include="Mono.Security">
+      <HintPath>Lib\Mono.Security.dll</HintPath>
+    </Reference>
+    <Reference Include="Newtonsoft.Json">
+      <HintPath>Lib\Newtonsoft.Json.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    
+    
+    <Reference Include="Microsoft.CSharp" />
+    
+    <Reference Include="System.Data" />
+    
+    <Reference Include="System.Net.Http" />
+    
+    <Reference Include="System.Xml" />
+    
+    <Reference Include="Unity.AI.Navigation">
+      <HintPath>Lib\Unity.AI.Navigation.dll</HintPath>
+    </Reference>
+    
+    <Reference Include="Unity.InputSystem">
+      <HintPath>Lib\Unity.InputSystem.dll</HintPath>
+    </Reference>
+    
+    <Reference Include="Unity.Polybrush">
+      <HintPath>Lib\Unity.Polybrush.dll</HintPath>
+    </Reference>
+    
+    <Reference Include="Unity.Postprocessing.Runtime">
+      <HintPath>Lib\Unity.Postprocessing.Runtime.dll</HintPath>
+    </Reference>
+    
+    <Reference Include="Unity.Recorder">
+      <HintPath>Lib\Unity.Recorder.dll</HintPath>
+    </Reference>
+    
+    <Reference Include="Unity.Recorder.Base">
+      <HintPath>Lib\Unity.Recorder.Base.dll</HintPath>
+    </Reference>
+    
+    <Reference Include="Unity.Services.Core">
+      <HintPath>Lib\Unity.Services.Core.dll</HintPath>
+    </Reference>
+    
+    <Reference Include="Unity.Services.Core.Analytics">
+      <HintPath>Lib\Unity.Services.Core.Analytics.dll</HintPath>
+    </Reference>
+    
+    <Reference Include="Unity.Services.Core.Configuration">
+      <HintPath>Lib\Unity.Services.Core.Configuration.dll</HintPath>
+    </Reference>
+    
+    <Reference Include="Unity.Services.Core.Device">
+      <HintPath>Lib\Unity.Services.Core.Device.dll</HintPath>
+    </Reference>
+    
+    <Reference Include="Unity.Services.Core.Environments">
+      <HintPath>Lib\Unity.Services.Core.Environments.dll</HintPath>
+    </Reference>
+    
+    <Reference Include="Unity.Services.Core.Environments.Internal">
+      <HintPath>Lib\Unity.Services.Core.Environments.Internal.dll</HintPath>
+    </Reference>
+    
+    <Reference Include="Unity.Services.Core.Internal">
+      <HintPath>Lib\Unity.Services.Core.Internal.dll</HintPath>
+    </Reference>
+    
+    <Reference Include="Unity.Services.Core.Networking">
+      <HintPath>Lib\Unity.Services.Core.Networking.dll</HintPath>
+    </Reference>
+    
+    <Reference Include="Unity.Services.Core.Registration">
+      <HintPath>Lib\Unity.Services.Core.Registration.dll</HintPath>
+    </Reference>
+    
+    <Reference Include="Unity.Services.Core.Scheduler">
+      <HintPath>Lib\Unity.Services.Core.Scheduler.dll</HintPath>
+    </Reference>
+    
+    <Reference Include="Unity.Services.Core.Telemetry">
+      <HintPath>Lib\Unity.Services.Core.Telemetry.dll</HintPath>
+    </Reference>
+    
+    <Reference Include="Unity.Services.Core.Threading">
+      <HintPath>Lib\Unity.Services.Core.Threading.dll</HintPath>
+    </Reference>
+    
+    <Reference Include="Unity.TextMeshPro">
+      <HintPath>Lib\Unity.TextMeshPro.dll</HintPath>
+    </Reference>
+    
+    <Reference Include="Unity.Timeline">
+      <HintPath>Lib\Unity.Timeline.dll</HintPath>
+    </Reference>
+    
+    <Reference Include="UnityEngine">
+      <HintPath>Lib\UnityEngine.dll</HintPath>
+    </Reference>
+    
+    <Reference Include="UnityEngine.AccessibilityModule">
+      <HintPath>Lib\UnityEngine.AccessibilityModule.dll</HintPath>
+    </Reference>
+    
+    <Reference Include="UnityEngine.AIModule">
+      <HintPath>Lib\UnityEngine.AIModule.dll</HintPath>
+    </Reference>
+    
+    <Reference Include="UnityEngine.AndroidJNIModule">
+      <HintPath>Lib\UnityEngine.AndroidJNIModule.dll</HintPath>
+    </Reference>
+    
+    <Reference Include="UnityEngine.AnimationModule">
+      <HintPath>Lib\UnityEngine.AnimationModule.dll</HintPath>
+    </Reference>
+    
+    <Reference Include="UnityEngine.ARModule">
+      <HintPath>Lib\UnityEngine.ARModule.dll</HintPath>
+    </Reference>
+    
+    <Reference Include="UnityEngine.AssetBundleModule">
+      <HintPath>Lib\UnityEngine.AssetBundleModule.dll</HintPath>
+    </Reference>
+    
+    <Reference Include="UnityEngine.AudioModule">
+      <HintPath>Lib\UnityEngine.AudioModule.dll</HintPath>
+    </Reference>
+    
+    <Reference Include="UnityEngine.ClothModule">
+      <HintPath>Lib\UnityEngine.ClothModule.dll</HintPath>
+    </Reference>
+    
+    <Reference Include="UnityEngine.ClusterInputModule">
+      <HintPath>Lib\UnityEngine.ClusterInputModule.dll</HintPath>
+    </Reference>
+    
+    <Reference Include="UnityEngine.ClusterRendererModule">
+      <HintPath>Lib\UnityEngine.ClusterRendererModule.dll</HintPath>
+    </Reference>
+    
+    <Reference Include="UnityEngine.ContentLoadModule">
+      <HintPath>Lib\UnityEngine.ContentLoadModule.dll</HintPath>
+    </Reference>
+    
+    <Reference Include="UnityEngine.CoreModule">
+      <HintPath>Lib\UnityEngine.CoreModule.dll</HintPath>
+    </Reference>
+    
+    <Reference Include="UnityEngine.CrashReportingModule">
+      <HintPath>Lib\UnityEngine.CrashReportingModule.dll</HintPath>
+    </Reference>
+    
+    <Reference Include="UnityEngine.DirectorModule">
+      <HintPath>Lib\UnityEngine.DirectorModule.dll</HintPath>
+    </Reference>
+    
+    <Reference Include="UnityEngine.DSPGraphModule">
+      <HintPath>Lib\UnityEngine.DSPGraphModule.dll</HintPath>
+    </Reference>
+    
+    <Reference Include="UnityEngine.GameCenterModule">
+      <HintPath>Lib\UnityEngine.GameCenterModule.dll</HintPath>
+    </Reference>
+    
+    <Reference Include="UnityEngine.GIModule">
+      <HintPath>Lib\UnityEngine.GIModule.dll</HintPath>
+    </Reference>
+    
+    <Reference Include="UnityEngine.GridModule">
+      <HintPath>Lib\UnityEngine.GridModule.dll</HintPath>
+    </Reference>
+    
+    <Reference Include="UnityEngine.HotReloadModule">
+      <HintPath>Lib\UnityEngine.HotReloadModule.dll</HintPath>
+    </Reference>
+    
+    <Reference Include="UnityEngine.ImageConversionModule">
+      <HintPath>Lib\UnityEngine.ImageConversionModule.dll</HintPath>
+    </Reference>
+    
+    <Reference Include="UnityEngine.IMGUIModule">
+      <HintPath>Lib\UnityEngine.IMGUIModule.dll</HintPath>
+    </Reference>
+    
+    <Reference Include="UnityEngine.InputLegacyModule">
+      <HintPath>Lib\UnityEngine.InputLegacyModule.dll</HintPath>
+    </Reference>
+    
+    <Reference Include="UnityEngine.InputModule">
+      <HintPath>Lib\UnityEngine.InputModule.dll</HintPath>
+    </Reference>
+    
+    <Reference Include="UnityEngine.JSONSerializeModule">
+      <HintPath>Lib\UnityEngine.JSONSerializeModule.dll</HintPath>
+    </Reference>
+    
+    <Reference Include="UnityEngine.LocalizationModule">
+      <HintPath>Lib\UnityEngine.LocalizationModule.dll</HintPath>
+    </Reference>
+    
+    <Reference Include="UnityEngine.NVIDIAModule">
+      <HintPath>Lib\UnityEngine.NVIDIAModule.dll</HintPath>
+    </Reference>
+    
+    <Reference Include="UnityEngine.ParticleSystemModule">
+      <HintPath>Lib\UnityEngine.ParticleSystemModule.dll</HintPath>
+    </Reference>
+    
+    <Reference Include="UnityEngine.PerformanceReportingModule">
+      <HintPath>Lib\UnityEngine.PerformanceReportingModule.dll</HintPath>
+    </Reference>
+    
+    <Reference Include="UnityEngine.Physics2DModule">
+      <HintPath>Lib\UnityEngine.Physics2DModule.dll</HintPath>
+    </Reference>
+    
+    <Reference Include="UnityEngine.PhysicsModule">
+      <HintPath>Lib\UnityEngine.PhysicsModule.dll</HintPath>
+    </Reference>
+    
+    <Reference Include="UnityEngine.ProfilerModule">
+      <HintPath>Lib\UnityEngine.ProfilerModule.dll</HintPath>
+    </Reference>
+    
+    <Reference Include="UnityEngine.PropertiesModule">
+      <HintPath>Lib\UnityEngine.PropertiesModule.dll</HintPath>
+    </Reference>
+    
+    <Reference Include="UnityEngine.RuntimeInitializeOnLoadManagerInitializerModule">
+      <HintPath>Lib\UnityEngine.RuntimeInitializeOnLoadManagerInitializerModule.dll</HintPath>
+    </Reference>
+    
+    <Reference Include="UnityEngine.ScreenCaptureModule">
+      <HintPath>Lib\UnityEngine.ScreenCaptureModule.dll</HintPath>
+    </Reference>
+    
+    <Reference Include="UnityEngine.SharedInternalsModule">
+      <HintPath>Lib\UnityEngine.SharedInternalsModule.dll</HintPath>
+    </Reference>
+    
+    <Reference Include="UnityEngine.SpriteMaskModule">
+      <HintPath>Lib\UnityEngine.SpriteMaskModule.dll</HintPath>
+    </Reference>
+    
+    <Reference Include="UnityEngine.SpriteShapeModule">
+      <HintPath>Lib\UnityEngine.SpriteShapeModule.dll</HintPath>
+    </Reference>
+    
+    <Reference Include="UnityEngine.StreamingModule">
+      <HintPath>Lib\UnityEngine.StreamingModule.dll</HintPath>
+    </Reference>
+    
+    <Reference Include="UnityEngine.SubstanceModule">
+      <HintPath>Lib\UnityEngine.SubstanceModule.dll</HintPath>
+    </Reference>
+    
+    <Reference Include="UnityEngine.SubsystemsModule">
+      <HintPath>Lib\UnityEngine.SubsystemsModule.dll</HintPath>
+    </Reference>
+    
+    <Reference Include="UnityEngine.TerrainModule">
+      <HintPath>Lib\UnityEngine.TerrainModule.dll</HintPath>
+    </Reference>
+    
+    <Reference Include="UnityEngine.TerrainPhysicsModule">
+      <HintPath>Lib\UnityEngine.TerrainPhysicsModule.dll</HintPath>
+    </Reference>
+    
+    <Reference Include="UnityEngine.TextCoreFontEngineModule">
+      <HintPath>Lib\UnityEngine.TextCoreFontEngineModule.dll</HintPath>
+    </Reference>
+    
+    <Reference Include="UnityEngine.TextCoreTextEngineModule">
+      <HintPath>Lib\UnityEngine.TextCoreTextEngineModule.dll</HintPath>
+    </Reference>
+    
+    <Reference Include="UnityEngine.TextRenderingModule">
+      <HintPath>Lib\UnityEngine.TextRenderingModule.dll</HintPath>
+    </Reference>
+    
+    <Reference Include="UnityEngine.TilemapModule">
+      <HintPath>Lib\UnityEngine.TilemapModule.dll</HintPath>
+    </Reference>
+    
+    <Reference Include="UnityEngine.TLSModule">
+      <HintPath>Lib\UnityEngine.TLSModule.dll</HintPath>
+    </Reference>
+    
+    <Reference Include="UnityEngine.UI">
+      <HintPath>Lib\UnityEngine.UI.dll</HintPath>
+    </Reference>
+    
+    <Reference Include="UnityEngine.UIElementsModule">
+      <HintPath>Lib\UnityEngine.UIElementsModule.dll</HintPath>
+    </Reference>
+    
+    <Reference Include="UnityEngine.UIModule">
+      <HintPath>Lib\UnityEngine.UIModule.dll</HintPath>
+    </Reference>
+    
+    <Reference Include="UnityEngine.UmbraModule">
+      <HintPath>Lib\UnityEngine.UmbraModule.dll</HintPath>
+    </Reference>
+    
+    <Reference Include="UnityEngine.UnityAnalyticsCommonModule">
+      <HintPath>Lib\UnityEngine.UnityAnalyticsCommonModule.dll</HintPath>
+    </Reference>
+    
+    <Reference Include="UnityEngine.UnityAnalyticsModule">
+      <HintPath>Lib\UnityEngine.UnityAnalyticsModule.dll</HintPath>
+    </Reference>
+    
+    <Reference Include="UnityEngine.UnityConnectModule">
+      <HintPath>Lib\UnityEngine.UnityConnectModule.dll</HintPath>
+    </Reference>
+    
+    <Reference Include="UnityEngine.UnityCurlModule">
+      <HintPath>Lib\UnityEngine.UnityCurlModule.dll</HintPath>
+    </Reference>
+    
+    <Reference Include="UnityEngine.UnityTestProtocolModule">
+      <HintPath>Lib\UnityEngine.UnityTestProtocolModule.dll</HintPath>
+    </Reference>
+    
+    <Reference Include="UnityEngine.UnityWebRequestAssetBundleModule">
+      <HintPath>Lib\UnityEngine.UnityWebRequestAssetBundleModule.dll</HintPath>
+    </Reference>
+    
+    <Reference Include="UnityEngine.UnityWebRequestAudioModule">
+      <HintPath>Lib\UnityEngine.UnityWebRequestAudioModule.dll</HintPath>
+    </Reference>
+    
+    <Reference Include="UnityEngine.UnityWebRequestModule">
+      <HintPath>Lib\UnityEngine.UnityWebRequestModule.dll</HintPath>
+    </Reference>
+    
+    <Reference Include="UnityEngine.UnityWebRequestTextureModule">
+      <HintPath>Lib\UnityEngine.UnityWebRequestTextureModule.dll</HintPath>
+    </Reference>
+    
+    <Reference Include="UnityEngine.UnityWebRequestWWWModule">
+      <HintPath>Lib\UnityEngine.UnityWebRequestWWWModule.dll</HintPath>
+    </Reference>
+    
+    <Reference Include="UnityEngine.VehiclesModule">
+      <HintPath>Lib\UnityEngine.VehiclesModule.dll</HintPath>
+    </Reference>
+    
+    <Reference Include="UnityEngine.VFXModule">
+      <HintPath>Lib\UnityEngine.VFXModule.dll</HintPath>
+    </Reference>
+    
+    <Reference Include="UnityEngine.VideoModule">
+      <HintPath>Lib\UnityEngine.VideoModule.dll</HintPath>
+    </Reference>
+    
+    <Reference Include="UnityEngine.VirtualTexturingModule">
+      <HintPath>Lib\UnityEngine.VirtualTexturingModule.dll</HintPath>
+    </Reference>
+    
+    <Reference Include="UnityEngine.VRModule">
+      <HintPath>Lib\UnityEngine.VRModule.dll</HintPath>
+    </Reference>
+    
+    <Reference Include="UnityEngine.WindModule">
+      <HintPath>Lib\UnityEngine.WindModule.dll</HintPath>
+    </Reference>
+    
+    <Reference Include="UnityEngine.XRModule">
+      <HintPath>Lib\UnityEngine.XRModule.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="BBGreenTimer.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+
+
+  <Target Name="CopyDllToMods" AfterTargets="Build">
+    <Copy SourceFiles="$(TargetPath)" DestinationFolder="C:\Program Files (x86)\Steam\steamapps\common\BETON BRUTAL\Mods" />
+  </Target>
+
+
+</Project>

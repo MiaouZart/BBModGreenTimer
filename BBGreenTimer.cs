@@ -131,10 +131,10 @@ namespace BBGreenTimer
             var control = _modMenu.CreateGroup("Control");
             var enableWrapper = _modMenu.CreateWrapper();
             enableWrapper.Add(_modMenu.CreateLabel("Enable"));
-            var toggleOnOFf = _modMenu.CreateToggle(categoryName, "On", enabled);
+            var toggleOnOFf = _modMenu.CreateToggle(categoryName, "On", _enable);
             toggleOnOFf.RegisterValueChangedCallback(delegate(ChangeEvent<bool> b){
-                enabled = b.newValue;
-                _greenTimerRoot.visible = enabled;
+                _enable = b.newValue;
+                _greenTimerRoot.visible = _enable;
             });
             enableWrapper.Add(toggleOnOFf);
 
@@ -157,8 +157,8 @@ namespace BBGreenTimer
             greenTimerSetting.Add(position);
             greenTimerSetting.Add(control);
 
-            enabled = toggleOnOFf.value;
-            _greenTimerRoot.visible = enabled;
+            _enable = toggleOnOFf.value;
+            _greenTimerRoot.visible = _enable;
             updatePosition();
             updateScale();
         }
@@ -169,7 +169,7 @@ namespace BBGreenTimer
         }
 
         private void Update() {
-            if (!enabled)
+            if (!_enable)
             {
                 return;
             }

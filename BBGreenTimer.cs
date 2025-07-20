@@ -6,7 +6,6 @@ using BBModMenu;
 using HarmonyLib;
 using MelonLoader;
 using UnityEngine;
-using UnityEngine.InputSystem;
 using UnityEngine.UIElements;
 
 namespace BBGreenTimer

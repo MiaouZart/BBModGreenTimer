@@ -93,8 +93,8 @@ namespace BBGreenTimer
             String categoryName = "GreenTimer";
             var greenTimerSetting = _modMenu.AddSetting(categoryName);
 
-            var xSlider = _modMenu.CreateSlider(categoryName, "XPositon", 0, 100, 50, true);
-            var ySlider = _modMenu.CreateSlider(categoryName, "YPosition", 0, 100, 50, true);
+            var xSlider = _modMenu.CreateSlider(categoryName, "XPositon", 0, 100, 88, true);
+            var ySlider = _modMenu.CreateSlider(categoryName, "YPosition", 0, 100, 8, true);
             var scaleSlider = _modMenu.CreateSlider(categoryName, "Scale", 0.1f, 3f, 1f, false);
 
             Action updatePosition = () => {

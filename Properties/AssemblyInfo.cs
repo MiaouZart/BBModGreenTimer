@@ -17,7 +17,7 @@ using MelonLoader;
 [assembly: ComVisible(false)]
 
 
-[assembly: MelonInfo(typeof(BBGreenTimer.BBGreenTimer), "Beton Brutal Green Timer", "1.0.0", "MiaouZart")]
+[assembly: MelonInfo(typeof(BBGreenTimer.BBGreenTimer), "Beton Brutal Green Timer", "1.0.1", "MiaouZart")]
 [assembly: MelonGame("", "Beton Brutal")]
 [assembly: MelonAdditionalDependencies("BBModMenu")]
 

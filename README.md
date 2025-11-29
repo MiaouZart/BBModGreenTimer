@@ -1,6 +1,6 @@
 # Green Timer
 
-A Trackmania-inspired timer mod for Beton Brutal that displays a green timer indicator showing your current run performance compared to your personal best.
+A Trackmania-inspired timer mod for Beton Brutal that displays a green timer that tracks how long you have been playing a map.
 
 ## Description
 
